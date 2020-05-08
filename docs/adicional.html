@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Estadísticas - Coronavirus</title>
+
+    <!-- amCharts includes -->
+    <script src="deps/amcharts4/core.js"></script>
+    <script src="deps/amcharts4/charts.js"></script>
+    <script src="deps/amcharts4/maps.js"></script>
+
+    <script src="deps/amcharts4/themes/dark.js"></script>
+    <script src="deps/amcharts4/themes/animated.js"></script>
+
+    <script src="deps/amcharts4-geodata/worldLow.js"></script>
+    <script src="deps/amcharts4-geodata/data/countries2.js"></script>
+
+    <!-- DataTables includes -->
+    <script src="deps/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" media="all" href="deps/datatables/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" media="all" href="deps/datatables/css/select.dataTables.min.css" />
+    <script src="deps/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="deps/datatables/js/dataTables.select.min.js"></script>
+
+    <!-- Data  -->
+    <script src="data/js/world_timeline.js"></script>
+    <script src="data/js/total_timeline.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" media="all" href="dark.css" />
+    <link rel="stylesheet" href="public/assets/dist/css/estilos.css">
+
+    <!-- Main app -->
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <a href="public/index.html">
+                <img src="public/assets/imagenes/logo.png">
+            </a>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            <h5>Estadísticas</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h5>Contacto</h5>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="flexbox">
+            <div id="chartdiv"></div>
+            <div id="list">
+                <table id="areas" class="compact hover order-column row-border">
+                    <thead>
+                        <tr>
+                            <th>País/Estado</th>
+                            <th>Confirmados</th>
+                            <th>Muertos</th>
+                            <th>Recuperados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+
+        </footer>
+
+        <script>
+            ft = document.querySelector('footer');
+            let anio = new Date().getFullYear();
+            let html = `Sierra Nahuel, Silvero Iván, Sosa Leal Pío - ${anio}`;
+            ft.append(html);
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.contenedor {
+    position: relative;
+}
+
+header {
+    width: auto;
+    height: 6em;
+    padding-left: 5em;
+    padding-right: 5em;
+    position: relative;
+    background-color: white;
+}
+
+header img {
+    width: 20%;
+    margin: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    float: left;
+}
+
+header nav {
+    width: 20em;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    right: -2em;
+    transform: translateY(-50%);
+    float: right;
+    background-color: white;
+}
+
+header nav ul {
+    list-style: none;
+    background-color: white;
+}
+
+header nav ul li {
+    padding: 1em;
+    display: inline-block;
+    background-color: white;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    background-color: white;
+}
+
+header nav ul li a h5 {
+    color: black;
+    background-color: white;
+}
+
+header nav ul li a h5:hover {
+    padding-bottom: 0.5em;
+    transition: 0.3s;
+    border-bottom: 3px solid rgb(216, 11, 11);
+}
+
+header nav ul li a .border {
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid rgb(216, 11, 11);
+}
+
+.img {
+    width: auto;
+    height: 22em;
+    position: relative;
+    background-image: url(../imagenes/hospital2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-box-shadow: inset 0px 13px 38px -5px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: inset 0px 13px 38px -5px rgba(0, 0, 0, 0.52);
+    box-shadow: inset 0px 13px 38px -5px rgba(0, 0, 0, 0.52);
+}
+
+.img .introduccion {
+    width: 25em;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    right: 20em;
+    transform: translateY(-50%);
+}
+
+.img .introduccion .titulo {
+    font-size: 3.5em;
+}
+
+.img .introduccion p {
+    font-size: 1.2em;
+}
+
+.main {
+    width: auto;
+    height: 50em;
+    position: relative;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.main section {
+    width: 45em;
+    height: auto;
+    margin: 1em;
+    padding: 2em;
+    float: left;
+}
+
+.main section article {
+    margin-bottom: 2em;
+}
+
+.main aside {
+    width: 17em;
+    height: auto;
+    margin: 1em;
+    padding: 2em;
+    float: right;
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
+footer {
+    background-color: #353A3F;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding: 20px;
+}
