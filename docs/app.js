@@ -11,8 +11,6 @@
  */
 
 
-
-
 // Themes begin
 am4core.useTheme(am4themes_animated);
 am4core.useTheme(am4themes_dark);
@@ -295,7 +293,7 @@ am4core.ready(function() {
     var activeCountryColor = am4core.color("#0f0f0f");
 
     var currentIndex;
-    var currentCountry = "World";
+    var currentCountry = "Global";
 
     // last date of the data
     var lastDate = new Date(covid_total_timeline[covid_total_timeline.length - 1].date);
@@ -590,10 +588,10 @@ am4core.ready(function() {
     var mapGlobeSwitch = mapChart.createChild(am4core.SwitchButton);
     mapGlobeSwitch.align = "right"
     mapGlobeSwitch.y = 15;
-    mapGlobeSwitch.leftLabel.text = "Map";
+    mapGlobeSwitch.leftLabel.text = "Mapa";
     mapGlobeSwitch.leftLabel.fill = am4core.color("#ffffff");
     mapGlobeSwitch.rightLabel.fill = am4core.color("#ffffff");
-    mapGlobeSwitch.rightLabel.text = "Globe";
+    mapGlobeSwitch.rightLabel.text = "Esfera";
     mapGlobeSwitch.verticalCenter = "top";
 
 
@@ -618,12 +616,12 @@ am4core.ready(function() {
     var absolutePerCapitaSwitch = mapChart.createChild(am4core.SwitchButton);
     absolutePerCapitaSwitch.align = "center"
     absolutePerCapitaSwitch.y = 15;
-    absolutePerCapitaSwitch.leftLabel.text = "Absolute";
+    absolutePerCapitaSwitch.leftLabel.text = "Absoluto";
     absolutePerCapitaSwitch.leftLabel.fill = am4core.color("#ffffff");
     absolutePerCapitaSwitch.rightLabel.fill = am4core.color("#ffffff");
-    absolutePerCapitaSwitch.rightLabel.text = "Per Capita";
+    absolutePerCapitaSwitch.rightLabel.text = "Per Cápita";
     absolutePerCapitaSwitch.rightLabel.interactionsEnabled = true;
-    absolutePerCapitaSwitch.rightLabel.tooltipText = "When calculating max value, countries with population less than 100.000 are not included."
+    absolutePerCapitaSwitch.rightLabel.tooltipText = "Al calcular el valor máximo, los países con cantidad de habitantes menor a 100.000 son excluidos"
     absolutePerCapitaSwitch.verticalCenter = "top";
 
 
@@ -783,7 +781,7 @@ am4core.ready(function() {
 
 
     var sizeLabel = container.createChild(am4core.Label);
-    sizeLabel.text = "max bubble size *";
+    sizeLabel.text = "tamaño máximo de la burbuja *";
     sizeLabel.fill = am4core.color("#ffffff");
     sizeLabel.rotation = 90;
     sizeLabel.fontSize = "10px";
@@ -794,7 +792,7 @@ am4core.ready(function() {
     sizeLabel.tooltip.setBounds({ x: 0, y: 0, width: 200000, height: 200000 })
     sizeLabel.tooltip.label.wrap = true;
     sizeLabel.tooltip.label.maxWidth = 300;
-    sizeLabel.tooltipText = "Some countries have so many cases that bubbles for countries with smaller values often look the same even if there is a significant difference between them. This slider can be used to increase maximum size of a bubble so that when you zoom in to a region with relatively small values you could compare them anyway."
+    sizeLabel.tooltipText = "Algunos países tienen tantos casos que las burbujas para los países con valores inferiores frecuentemente se ven iguales incluso si hay una diferencia significativa entre ellos. Este control deslizante puede ser usado para incrementar el tamaño máximo de una burbuja, de esta forma, cuando te acerques a una región con valores relativamente chicos puedas hacer comparaciones de todas formas."
     sizeLabel.fill = am4core.color("#ffffff");
 
     sizeLabel.adapter.add("y", function(y, target) {
@@ -844,7 +842,7 @@ am4core.ready(function() {
 
 
     var filterLabel = container.createChild(am4core.Label);
-    filterLabel.text = "filter max values *";
+    filterLabel.text = "filtrar valores máximos";
     filterLabel.rotation = 90;
     filterLabel.fontSize = "10px";
     filterLabel.fill = am4core.color("#ffffff");
@@ -855,7 +853,7 @@ am4core.ready(function() {
     filterLabel.paddingBottom = 40;
     filterLabel.tooltip.label.wrap = true;
     filterLabel.tooltip.label.maxWidth = 300;
-    filterLabel.tooltipText = "This filter allows to remove countries with many cases from the map so that it would be possible to compare countries with smaller number of cases."
+    filterLabel.tooltipText = "Este filtro te permite sacar a los paises con muchos casos del mapa para que sea posible comparar a los países con valores inferiores de casos."
     filterLabel.fill = am4core.color("#ffffff");
 
     filterLabel.adapter.add("y", function(y, target) {
@@ -985,8 +983,8 @@ am4core.ready(function() {
 
 
     var seriesTypeSwitch = lineChart.legend.createChild(am4core.SwitchButton);
-    seriesTypeSwitch.leftLabel.text = "totals";
-    seriesTypeSwitch.rightLabel.text = "day change"
+    seriesTypeSwitch.leftLabel.text = "absoluto";
+    seriesTypeSwitch.rightLabel.text = "cambios diarios"
     seriesTypeSwitch.leftLabel.fill = am4core.color("#ffffff");
     seriesTypeSwitch.rightLabel.fill = am4core.color("#ffffff");
 
@@ -1155,7 +1153,7 @@ am4core.ready(function() {
 
     // data warning label
     var label = lineChart.plotContainer.createChild(am4core.Label);
-    label.text = "Current day stats may be incomplete until countries submit their data.";
+    label.text = "Las estadísticas del día actual pueden estar incompletas hasta que los países envíen su información.";
     label.fill = am4core.color("#ffffff");
     label.fontSize = "0.8em";
     label.paddingBottom = 4;
@@ -1431,7 +1429,7 @@ am4core.ready(function() {
 
     // show world data
     function showWorld() {
-        currentCountry = "World";
+        currentCountry = "Global";
         currentPolygon = undefined;
         resetHover();
 
@@ -1607,7 +1605,7 @@ am4core.ready(function() {
     setTimeout(updateSeriesTooltip, 3000);
 
     function updateCountryTooltip() {
-        polygonSeries.mapPolygons.template.tooltipText = "[bold]{name}: {value.formatNumber('#.')}[/]\n[font-size:10px]" + currentTypeName + " per million"
+        polygonSeries.mapPolygons.template.tooltipText = "[bold]{name}: {value.formatNumber('#.')}[/]\n[font-size:10px]" + currentTypeName + " por millón de habitantes"
     }
 
     /**
@@ -1640,7 +1638,7 @@ am4core.ready(function() {
 
 
     function idToName(id) {
-        return am4geodata_data_countries2[id] ? am4geodata_data_countries2[id].country : id == "XX" ? "Others" : id;
+        return am4geodata_data_countries2[id] ? am4geodata_data_countries2[id].country : id == "XX" ? "Otros" : id;
     }
 
     function removeAntarctica(mapData) {

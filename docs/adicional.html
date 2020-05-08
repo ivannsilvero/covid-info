@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/imagenes/coronavirusM.jpg" />
 
     <!-- amCharts includes -->
+
     <script src="./assets/deps/amcharts4/core.js"></script>
     <script src="./assets/deps/amcharts4/charts.js"></script>
     <script src="./assets/deps/amcharts4/maps.js"></script>
@@ -83,12 +84,15 @@
         <br><br>
         <br>
         <br>
-        <script>
+        <script src="https://www.amcharts.com/lib/4/geodata/lang/ES.js">
+            chart.geodataNames = am4geodata_lang_ES
+
             ft = document.querySelector('footer');
             let anio = new Date().getFullYear();
             let html = `Sierra Nahuel, Silvero Iván, Sosa Leal Pío - ${anio}`;
             ft.append(html);
         </script>
+
 </body>
 
 </html>
