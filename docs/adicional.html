@@ -8,8 +8,6 @@
 
 
     <!-- amCharts includes -->
-    <script src="https://www.amcharts.com/lib/4/geodata/lang/ES.js">
-    </script>
 
     <script src="./assets/deps/amcharts4/core.js"></script>
     <script src="./assets/deps/amcharts4/charts.js"></script>
@@ -29,9 +27,12 @@
     <script src="./assets/deps/datatables/js/dataTables.select.min.js"></script>
 
     <!-- Data  -->
-    <script src="./assets/data/js/world_timeline.js"></script>
-    <script src="./assets/data/js/total_timeline.js"></script>
+    <!-- <script src="./assets/data/js/world_timeline.js"></script>
+    <script src="./assets/data/js/total_timeline.js"></script> -->
+    <script src="https://covid.amcharts.com/data/js/world_timeline.js"></script>
+    <script src="https://covid.amcharts.com/data/js/total_timeline.js"></script>
 
+    </script>
     <!-- Stylesheet -->
     <link rel="stylesheet" media="all" href="./assets/dist/css/dark.css" />
     <link rel="stylesheet" href="./assets/dist/css/estilos.css">
@@ -56,7 +57,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="contactos.html">
                             <h5>Contacto</h5>
                         </a>
                     </li>
@@ -65,12 +66,12 @@
         </header>
         <div class="flexbox">
             <div id="chartdiv"></div>
-            <div id="list">
+            <div id="list" style="display: none;">
                 <table id="areas" class="compact hover order-column row-border">
                     <thead>
                         <tr>
                             <th>País/Estado</th>
-                            <th>Confirmados</th>
+                            <th>Casos Confirmados</th>
                             <th>Muertos</th>
                             <th>Recuperados</th>
                         </tr>

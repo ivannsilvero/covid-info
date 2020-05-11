@@ -1055,10 +1055,11 @@ am4core.ready(function() {
     var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
     // add series
     function addSeries(name, color) {
+        let nameSpanish = {"active": "actuales", "confirmed": "confirmados", "recovered": "recuperados", "deaths": "muertos"};
         var series = lineChart.series.push(new am4charts.LineSeries())
         series.dataFields.valueY = name;
         series.dataFields.dateX = "date";
-        series.name = capitalizeFirstLetter(name);
+        series.name = capitalizeFirstLetter(nameSpanish[name]);
         series.strokeOpacity = 0.6;
         series.stroke = color;
         series.fill = color;
@@ -1465,12 +1466,13 @@ am4core.ready(function() {
 
     // updates country name and date
     function updateCountryName() {
-        countryName.text = currentCountry + ", " + mapChart.dateFormatter.format(currentDate, "MMM dd, yyyy");
+        countryName.text = currentCountry + ", " + mapChart.dateFormatter.format(currentDate, "dd/MM/yyyy");
     }
 
     // update total values in buttons
     function updateTotals(index) {
         if (!isNaN(index)) {
+            var nameSpanish = { "active": "actuales", "confirmed": "confirmados", "recovered": "recuperados", "deaths": "muertos" }
             var di = covid_total_timeline[index];
             var date = new Date(di.date);
             currentDate = date;
@@ -1487,7 +1489,7 @@ am4core.ready(function() {
             for (var key in buttons) {
                 var count = Number(lineChart.data[index][key])
                 if (!isNaN(count)) {
-                    buttons[key].label.text = capitalizeFirstLetter(key) + ": " + numberFormatter.format(count, '#,###');
+                    buttons[key].label.text = capitalizeFirstLetter(nameSpanish[key]) + ": " + numberFormatter.format(count, '#,###');
                 }
             }
             currentIndex = index;
