@@ -31,7 +31,7 @@ header nav {
     height: 3em;
     position: absolute;
     top: 50%;
-    right: -2em;
+    right: 2em;
     transform: translateY(-50%);
     float: right;
     background-color: white;
@@ -73,7 +73,7 @@ header nav ul li a .border {
     width: auto;
     height: 22em;
     position: relative;
-    background-image: url(../imagenes/hospital2.jpg);
+    background-image: url(../../imagenes/hospital2.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -112,7 +112,7 @@ header nav ul li a .border {
     height: auto;
     margin: 1em;
     padding: 2em;
-    float: left;
+    float: right;
 }
 
 .main section article {
@@ -126,6 +126,7 @@ header nav ul li a .border {
     padding: 2em;
     float: right;
     background-color: rgba(204, 204, 204, 0.3);
+    border-radius: 35px;
 }
 
 footer {
@@ -136,4 +137,29 @@ footer {
     bottom: 0px;
     text-align: center;
     padding: 20px;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 35px;
+}
+
+.button:active {
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
+.lista {
+    position: relative;
+    left: 35px;
 }
