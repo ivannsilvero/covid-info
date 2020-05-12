@@ -8,34 +8,6 @@
     <link rel="shortcut icon" href="./assets/imagenes/coronavirusM.jpg" />
     <!-- <link rel="shortcut icon" href="./assets/imagenes/icono.png" /> -->
     <link rel="stylesheet" href="./assets/dist/css/estilos.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500&display=swap" rel="stylesheet">
-    <script src="../deps/amcharts4/core.js"></script>
-    <script src="../deps/amcharts4/charts.js"></script>
-    <script src="../deps/amcharts4/maps.js"></script>
-
-    <script src="../deps/amcharts4/themes/dark.js"></script>
-    <script src="../deps/amcharts4/themes/animated.js"></script>
-
-    <script src="../deps/amcharts4-geodata/worldLow.js"></script>
-    <script src="../deps/amcharts4-geodata/data/countries2.js"></script>
-
-    <!-- DataTables includes -->
-    <script src="..-/deps/jquery/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" media="all" href="../deps/datatables/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" media="all" href="../deps/datatables/css/select.dataTables.min.css" />
-    <script src="../deps/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../deps/datatables/js/dataTables.select.min.js"></script>
-
-    <!-- Data  -->
-    <script src="../data/js/world_timeline.js"></script>
-    <script src="../data/js/total_timeline.js"></script>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" media="all" href="../dark.css" />
-
-    <!-- Main app -->
-    <script src="../app.js"></script>
 </head>
 
 <body>
@@ -68,31 +40,25 @@
                 <P>Toda la informacion que podés encontrar para ayudarnos a prevenir.</P>
             </div>
         </div>
+        <style>
+            .btn-preg {
+                border-color: #000;
+                background-color: #ccc;
+                padding: 0.5em;
+                margin: 1em;
+            }
+            
+            .resp {
+                display: none;
+                padding: 0.5em;
+            }
+        </style>
 
-        <div class="main">
+        <button class="btn" id="btn1">PREGUNTA 1</div>
+        <div class="resp" id="resp1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consectetur sed, ab suscipit culpa placeat consequuntur expedita enim earum necessitatibus unde similique asperiores voluptate voluptatem error dicta soluta adipisci maxime. </div>
+        <div class="btn-preg" id="btn2">PREGUNTA 2</div>
+        <div class="resp" id="resp2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla iste atque, eveniet dolores, mollitia officia dignissimos ullam culpa at repudiandae delectus magni vel ea. Doloremque quidem iste dolor ducimus.</div>
 
-            <section>
-                <article>
-                    <h2>Estadísticas</h2>
-                    <br>
-                    <p>Esto no debería estar acá</p>
-                </article>
-
-                <article>
-                    <h2>Lorem, ipsum.</h2>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quidem molestias at porro dolor velit eaque repellat non harum tenetur cum sapiente nam amet temporibus, quisquam consequatur similique facere doloribus asperiores
-                        et accusantium error? Ratione in excepturi voluptatum ea quas libero eaque officia laudantium doloremque blanditiis, eum modi facilis accusantium obcaecati adipisci maxime quaerat delectus repellendus voluptas assumenda incidunt
-                        possimus totam harum! Pariatur modi nostrum facilis rerum nemo quam numquam.</p>
-                </article>
-            </section>
-
-            <aside>
-                <h2>Lorem, ipsum.</h2>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nisi illo impedit voluptate deserunt iste odit pariatur dignissimos minus reprehenderit molestiae sapiente vel veniam unde, natus quibusdam saepe beatae nam!</p>
-            </aside>
-        </div>
 
         <footer>
 
@@ -100,7 +66,7 @@
     </div>
 
     <script src="./assets/dist/js/app.js"></script>
-    <script src="./assets/imagenes/hostpital2.jpg"></script>
+    <script src="./assets/dist/js/informacion.js"></script>
 </body>
 
 </html>
