@@ -168,7 +168,7 @@ footer {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 35px;
     width: 100%;
     text-align: left;
     border: none;
@@ -186,4 +186,8 @@ footer {
     background-color: white;
     display: none;
     overflow: hidden;
+}
+
+.inText {
+    text-align: center;
 }

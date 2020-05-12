@@ -1,5 +1,10 @@
+const h1 = document.getElementById("mc");
 let acc = document.getElementsByClassName("accordion");
 let i;
+
+if (h1.style.display == "none") {
+    h1.style.display = "block";
+}
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
