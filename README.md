@@ -2,7 +2,7 @@
 
 Aplicación que implementa amcharts para recopilar información sobre los casos de coronavirus en el mundo.
 
-https://ivannsilvero.github.io/covid-info/index.html
+_DEMO_: https://ivannsilvero.github.io/covid-info/index.html
 
 ***Elementos utilizados:*** 
 - Visual Studio Code
@@ -15,10 +15,8 @@ https://ivannsilvero.github.io/covid-info/index.html
     - https://www.infobae.com/sociedad/2020/03/21/coronavirus-en-la-argentina-telefonos-para-hacer-consultas/
     - https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses
 ___
-***Para más información, recurra a fuentes oficiales:***
-```
- https://www.who.int/es
- ```
+Para más información, recurra a [fuentes oficiales](https://www.who.int/es)
+
 ___
 ***Hecho por alumnos de la EESTN5.*** 
 - **Sierra Nahuel**
